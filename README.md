@@ -1,9 +1,9 @@
 # Remy the Mouse
 
-this isnt hosted, the only way to access the gif creation is to run ```flask_server.py``` and use url extention /image/<currency>
+this isnt hosted, the only way to access the gif creation is to run ```flask_server.py``` and use url extention ```/image/<currency>```
 you will need to format the currency in the url by replacing the forward slash '/' with a dash '-' e.g. EUR-USD
 the currencies supported are:
-EUR/USD
+```EUR/USD
 USD/JPY
 GBP/USD
 USD/TRY
@@ -44,4 +44,4 @@ NZD/CAD
 NZD/CHF
 BTC/USD
 BTC/EUR
-ETH/USD
+ETH/USD```
