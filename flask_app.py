@@ -3,7 +3,7 @@
 
 from flask import Flask, send_file
 from service.scrape_data import get_number
-from Adam.Number import Number, Turtle
+from Adam.Number import Number, Turtle, Draw
 
 app = Flask(__name__)
 
@@ -16,11 +16,11 @@ def hello_world():
 def number():
     return get_number('EUR/USD')
 
-@app.route('/number/<currency>')
+@app.route('/image/<currency>')
 def number_currency(currency):
     number = get_number(currency.replace('-', '/'))
-    number = Number(number)
-    turtle = Turtle(number.binary)
+    number = Number(float(number.replace(",", "")))
+    turtle = Draw(number.binary)
     return send_file('image.gif', mimetype='image/gif')
 
 
